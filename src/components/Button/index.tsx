@@ -3,11 +3,11 @@ import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 
 export interface ButtonProps {  
-  childen: ReactNode;
+  children: ReactNode;
   asChild?: boolean;
 }
 
-export function Button({ childen, asChild }: ButtonProps) {
+export function Button({ children, asChild }: ButtonProps) {
   const Comp = asChild ? Slot : 'button'
 
   return(
@@ -17,7 +17,7 @@ export function Button({ childen, asChild }: ButtonProps) {
         'w-full transition-colors hover:bg-cyan-300 focus:ring-2 ring-white'        
       )}
     >
-      {childen}
+      {children}
     </Comp>
   )
 }
