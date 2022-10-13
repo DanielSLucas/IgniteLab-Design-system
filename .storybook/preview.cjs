@@ -5,7 +5,9 @@ import '../src/styles/global.css';
 
 
 // Initialize MSW
-initialize();
+initialize({
+  onUnhandledRequest: 'bypass' // remove logs for all unhandled requests
+});
 
 // Provide the MSW addon decorator globally
 export const decorators = [mswDecorator];
